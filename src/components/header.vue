@@ -5,7 +5,13 @@
         <img src="../assets/img/dc-logo.png" alt="dc logo" />
       </div>
       <div>
-        <ul></ul>
+        <ul>
+          <li :key="index" v-for="(link, index) in headerNav">
+            <a :href="link.url">
+              {{ link.text }}
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
   </div>
@@ -74,4 +80,24 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  ul {
+    list-style: none;
+    li {
+      display: inline;
+      padding: 0 1.5rem;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+</style>
