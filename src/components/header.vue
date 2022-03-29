@@ -1,20 +1,18 @@
 <template>
-  <div>
-    <header>
-      <div>
-        <img src="../assets/img/dc-logo.png" alt="dc logo" />
-      </div>
-      <div>
-        <ul>
-          <li :key="index" v-for="(link, index) in headerNav">
-            <a :href="link.url">
-              {{ link.text }}
-            </a>
-          </li>
-        </ul>
-      </div>
-    </header>
-  </div>
+  <header>
+    <div>
+      <img src="../assets/img/dc-logo.png" alt="dc logo" />
+    </div>
+    <div>
+      <ul>
+        <li :key="index" v-for="(link, index) in headerNav">
+          <a :href="link.url">
+            {{ link.text }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
 </template>
 
 <script>

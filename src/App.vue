@@ -2,21 +2,24 @@
   <div id="app">
     <indexHeader />
     <mainContent />
-    <mainNavigation />
+    <mainNav />
+    <indexFooter />
   </div>
 </template>
 
 <script>
-import indexHeader from "./components/header.vue";
-import mainContent from "./components/content.vue";
-import mainNavigation from "./components/navigation.vue";
+import indexHeader from "./components/Header.vue";
+import mainContent from "./components/Content.vue";
+import mainNav from "./components/Main.vue";
+import indexFooter from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     indexHeader,
     mainContent,
-    mainNavigation,
+    mainNav,
+    indexFooter,
   },
 };
 </script>
