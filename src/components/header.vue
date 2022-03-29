@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "mainHeader",
+  name: "indexHeader",
   data: function () {
     return {
       headerNav: [

@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <mainHeader />
+    <indexHeader />
     <mainContent />
     <mainNavigation />
   </div>
 </template>
 
 <script>
-import mainHeader from "./components/header.vue";
+import indexHeader from "./components/header.vue";
 import mainContent from "./components/content.vue";
 import mainNavigation from "./components/navigation.vue";
 
 export default {
   name: "App",
   components: {
-    mainHeader,
+    indexHeader,
     mainContent,
     mainNavigation,
   },

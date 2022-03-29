@@ -1,8 +1,13 @@
 <template>
-  <div class="mainNav-container">
-    <div v-for="(link, index) in mainNav" :key="index">
-      <img :src="link.imgSrc" :alt="link.title" :href="link.url" />
-    </div>
+  <div>
+    <ul>
+      <li v-for="(link, index) in mainNav" :key="index">
+        <a href="">
+          <img :src="require(link.imgSrc)" alt="link-title" />
+          <h4>{{ link.title }}</h4>
+        </a>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -18,13 +23,12 @@ export default {
           title: "Digital comics",
         },
         {
-          imgSrc: "../assets/img/buy-comics-merchandise.png",
+          imgSrc: "..assets/img/buy-comics-merchandise.png",
           url: "#",
           title: "DC merchandise",
         },
         {
           imgSrc: "../assets/img/buy-comics-subscriptions.png",
-
           url: "#",
           title: "subscription",
         },
