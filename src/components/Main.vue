@@ -1,47 +1,43 @@
 <template>
-  <div>
-    <h1>ciao</h1>
-    <div>
-      <ul>
-        <li v-for="(link, index) in mainNav" :key="index">
-          <a href="">
-            <img :src="require(link.imgSrc)" alt="link-title" />
-            <h4>{{ link.title }}</h4>
-          </a>
-        </li>
-      </ul>
+  <nav>
+    <div v-for="(element, index) in navList" :key="index">
+      <img
+        :src="require(`../assets/img/${element.imgSrc}`)"
+        :alt="element.title"
+      />
+      <h5 class="text-uppercase">{{ element.title }}</h5>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>
 export default {
-  name: "mainNav",
+  name: "mainNavigation",
   data: function () {
     return {
-      mainNav: [
+      navList: [
         {
-          imgSrc: "../assets/img/buy-comics-digital-comics.png",
+          imgSrc: "buy-comics-digital-comics.png",
           url: "#",
           title: "Digital comics",
         },
         {
-          imgSrc: "..assets/img/buy-comics-merchandise.png",
+          imgSrc: "buy-comics-merchandise.png",
           url: "#",
           title: "DC merchandise",
         },
         {
-          imgSrc: "../assets/img/buy-comics-subscriptions.png",
+          imgSrc: "buy-comics-subscriptions.png",
           url: "#",
           title: "subscription",
         },
         {
-          imgSrc: "../assets/img/buy-comics-shop-locator.png",
+          imgSrc: "buy-comics-shop-locator.png",
           url: "#",
           title: "comic shop locator",
         },
         {
-          imgSrc: "../assets/img/buy-dc-power-visa.svg",
+          imgSrc: "buy-dc-power-visa.svg",
           url: "#",
           title: "DC power visa",
         },
@@ -52,8 +48,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main {
-  color: black;
-  background-color: red;
+@import "../components/style.scss";
+
+nav {
+  background-color: $dc-blue;
+  height: 100px;
+  @include flexed(row, space-evenly, center);
+  div {
+    @include flexed(row, start, center);
+    img {
+      height: 50px;
+    }
+    h5 {
+      color: white;
+      padding-left: 0.5rem;
+    }
+  }
 }
 </style>

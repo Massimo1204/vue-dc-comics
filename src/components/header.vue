@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="text-uppercase">
     <div>
       <img src="../assets/img/dc-logo.png" alt="dc logo" />
     </div>
@@ -79,18 +79,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../components/style.scss";
+
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
+  @include flexed(row, space-between, center);
   font-weight: 600;
   font-size: 0.8rem;
+  div {
+    img {
+      height: 80px;
+    }
+  }
   ul {
     list-style: none;
     li {
       display: inline;
-      padding: 0 1.5rem;
+      padding: 0 0.8rem;
       a {
         text-decoration: none;
         color: black;

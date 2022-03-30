@@ -2,7 +2,7 @@
   <div id="app">
     <indexHeader />
     <mainContent />
-    <mainNav />
+    <mainNavigation />
     <indexFooter />
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 import indexHeader from "./components/Header.vue";
 import mainContent from "./components/Content.vue";
-import mainNav from "./components/Main.vue";
+import mainNavigation from "./components/Main.vue";
 import indexFooter from "./components/Footer.vue";
 
 export default {
@@ -18,13 +18,15 @@ export default {
   components: {
     indexHeader,
     mainContent,
-    mainNav,
+    mainNavigation,
     indexFooter,
   },
 };
 </script>
 
 <style lang="scss">
+@import "./components/style.scss";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

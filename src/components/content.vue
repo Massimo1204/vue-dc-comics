@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="content-container">
+    <div class="w-80">
       <h2>--> Content goes here</h2>
     </div>
   </div>
@@ -13,6 +13,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../components/style.scss";
+
 div {
   background: black;
   padding: 0.9rem 0;
