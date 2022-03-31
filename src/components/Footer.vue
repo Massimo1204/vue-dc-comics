@@ -77,7 +77,6 @@ export default {
 @import "../components/style.scss";
 
 footer {
-  color: white;
   background-image: url("../assets/img/footer-bg.jpg");
   div {
     @include flexed(row, space-between, start);

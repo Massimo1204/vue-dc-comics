@@ -1,16 +1,22 @@
 <template>
   <header class="text-uppercase">
-    <div>
-      <img src="../assets/img/dc-logo.png" alt="dc logo" />
-    </div>
-    <div>
-      <ul>
-        <li :key="index" v-for="(link, index) in headerNav">
-          <a :href="link.url">
-            {{ link.text }}
-          </a>
-        </li>
-      </ul>
+    <div class="w-80">
+      <div>
+        <img src="../assets/img/dc-logo.png" alt="dc logo" />
+      </div>
+      <div>
+        <ul>
+          <li :key="index" v-for="(link, index) in headerNav">
+            <a
+              :class="link.state ? 'active' : ''"
+              :href="link.url"
+              @click="changeState(index)"
+            >
+              {{ link.text }}
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 </template>
@@ -74,6 +80,14 @@ export default {
       ],
     };
   },
+  methods: {
+    changeState(index) {
+      this.headerNav.forEach((element) => {
+        element.state = false;
+      });
+      this.headerNav[index].state = true;
+    },
+  },
 };
 </script>
 
@@ -82,22 +96,30 @@ export default {
 @import "../components/style.scss";
 
 header {
-  @include flexed(row, space-between, center);
-  font-weight: 600;
-  font-size: 0.8rem;
+  padding: 0.7rem;
   div {
-    img {
-      height: 80px;
+    @include flexed(row, space-between, center);
+    font-weight: 600;
+    font-size: 0.9rem;
+    div {
+      img {
+        height: 80px;
+      }
     }
-  }
-  ul {
-    list-style: none;
-    li {
-      display: inline;
-      padding: 0 0.8rem;
-      a {
-        text-decoration: none;
-        color: black;
+    ul {
+      list-style: none;
+      li {
+        display: inline;
+        padding: 0 0.8rem;
+        a {
+          text-decoration: none;
+          color: black;
+          padding: 38px 0;
+        }
+        a.active {
+          border-bottom: 5px solid $dc-blue;
+          color: $dc-blue;
+        }
       }
     }
   }

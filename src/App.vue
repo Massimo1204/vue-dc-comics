@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <indexHeader />
+    <mainJumbotron />
     <mainContent />
     <mainNavigation />
     <indexFooter />
@@ -12,6 +13,7 @@ import indexHeader from "./components/Header.vue";
 import mainContent from "./components/Content.vue";
 import mainNavigation from "./components/Main.vue";
 import indexFooter from "./components/Footer.vue";
+import mainJumbotron from "./components/Jumbotron.vue";
 
 export default {
   name: "App",
@@ -20,6 +22,7 @@ export default {
     mainContent,
     mainNavigation,
     indexFooter,
+    mainJumbotron,
   },
 };
 </script>
@@ -31,6 +34,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: white;
 }
 </style>

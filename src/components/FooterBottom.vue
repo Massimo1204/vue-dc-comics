@@ -70,9 +70,9 @@ div {
       button {
         background-color: $footer-grey;
         border: 2px solid $dc-blue;
-        padding: 0.5rem;
-        color: white;
+        padding: 0.8rem 1rem;
         font-weight: 600;
+        color: white;
       }
     }
     div.footer-logos {

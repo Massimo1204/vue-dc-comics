@@ -60,7 +60,6 @@ nav {
       height: 50px;
     }
     h5 {
-      color: white;
       padding-left: 0.5rem;
     }
   }
